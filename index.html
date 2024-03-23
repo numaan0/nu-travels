@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to NuTravels</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-gb0SIsa0CkjHB9mMkKiS6L6j3vJvu9bTt2Xii+G7Z1FNMm6wFJ0o0e2J0VzVJGzR" crossorigin="anonymous"> -->
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">NuTravels</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Book</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Packages
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">United State</a></li>
+              <li><a class="dropdown-item" href="#">India</a></li>
+              <li><a class="dropdown-item" href="#">France</a></li>
+              <li><a class="dropdown-item" href="#">Germany</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+        <div class="d-flex" role="search">
+          <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+          <button class="btn btn-primary ms-3" type="button" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <div class="background-image">
+        <div class="first-secitoin">
+            <h1 class="glossy-text">Welcome to NuTravels</h1>
+            <h2 class="country" id="placeName">Visit <span id="countryName">PlaceName</span></h2>
+            <a href="#" class="btn btn-primary">Book Now</a>
+        </div>
+
+
+        <div class="second-section">
+            <div class="booking-section">
+                <div class="left-section">
+                    <img src="assets/NuTravels.png" alt="Brand Logo">
+                </div>
+                <div class="right-section">
+                    <h2>Booking Here</h2>
+                    <form id="booking-form">
+                        <div class="form-group">
+                            <label for="destination">Where to:</label>
+                            <select id="destination" name="destination">
+                                <option value="Paris">Paris</option>
+                                <option value="New York">New York</option>
+                                <option value="Tokyo">Tokyo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="persons">How Many Person:</label>
+                            <input type="number" id="persons" name="persons" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="start-date">Start Date:</label>
+                            <input type="date" id="start-date" name="start-date" min="2022-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label for="end-date">End Date:</label>
+                            <input type="date" id="end-date" name="end-date" min="2022-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description" rows="4" minlength="50"
+                                maxlength="500"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Now</button>
+                    </form>
+                </div>
+    
+            </div>
+    
+        </div>
+        
+        <h2 style="text-align:center">Packages</h2>
+
+<div class="slideshow-container">
+  <div class="package-card mySlides1">
+    <img src="assets/parisimage.jpg" alt="Paris">
+    <h3>Paris</h3>
+    <p>Eiffel Tower, Louvre Museum, Notre Dame</p>
+    <p>Price: $700</p>
+    <p>Rating: ★★★★☆</p>
+    <button class="btn-book-now">Book Now</button>
+  </div>
+
+  <div class="package-card mySlides1">
+    <img src="assets/londonimage.jpg" alt="London">
+    <h3>London</h3>
+    <p>Big Ben, Buckingham Palace, Tower of London</p>
+    <p>Price: $800</p>
+    <p>Rating: ★★★★☆</p>
+    <button class="btn-book-now">Book Now</button>
+  </div>
+
+  <div class="package-card mySlides1">
+    <img src="assets/newyork.jpg" alt="New York">
+    <h3>New York</h3>
+    <p>Statue of Liberty, Central Park, Empire State Building</p>
+    <p>Price: $900</p>
+    <p>Rating: ★★★★☆</p>
+    <button class="btn-book-now">Book Now</button>
+  </div>
+
+  <div class="package-card mySlides1">
+    <img src="assets/parisimage.jpg" alt="Tokyo">
+    <h3>Mexico</h3>
+    <p>Sensō-ji, Tokyo Tower, Shibuya Crossing</p>
+    <p>Price: $1000</p>
+    <p>Rating: ★★★★☆</p>
+    <button class="btn-book-now">Book Now</button>
+  </div>
+  <div class="package-card mySlides1">
+    <img src="assets/londonimage.jpg" alt="Tokyo">
+    <h3>Japan</h3>
+    <p>Sensō-ji, Tokyo Tower, Shibuya Crossing</p>
+    <p>Price: $1000</p>
+    <p>Rating: ★★★★☆</p>
+    <button class="btn-book-now">Book Now</button>
+  </div>
+  <div class="package-card mySlides1">
+    <img src="assets/newyork.jpg" alt="Tokyo">
+    <h3>Singapore</h3>
+    <p>Sensō-ji, Tokyo Tower, Shibuya Crossing</p>
+    <p>Price: $1000</p>
+    <p>Rating: ★★★★☆</p>
+    <button class="btn-book-now">Book Now</button>
+  </div>
+  <div class="package-card mySlides1">
+    <img src="assets/londonimage.jpg" alt="Tokyo">
+    <h3>Brazil</h3>
+    <p>Sensō-ji, Tokyo Tower, Shibuya Crossing</p>
+    <p>Price: $1000</p>
+    <p>Rating: ★★★★☆</p>
+    <button class="btn-book-now">Book Now</button>
+  </div>
+  <div class="package-card mySlides1">
+    <img src="assets/parisimage.jpg" alt="Tokyo">
+    <h3>Dubai</h3>
+    <p>Sensō-ji, Tokyo Tower, Shibuya Crossing</p>
+    <p>Price: $1000</p>
+    <p>Rating: ★★★★☆</p>
+    <button class="btn-book-now">Book Now</button>
+  </div>
+  <div class="package-card mySlides1">
+    <img src="assets/londonimage.jpg" alt="Tokyo">
+    <h3>Bali</h3>
+    <p>Sensō-ji, Tokyo Tower, Shibuya Crossing</p>
+    <p>Price: $1000</p>
+    <p>Rating: ★★★★☆</p>
+    <button class="btn-book-now">Book Now</button>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<div class="services-section">
+    <div class="service-card">
+      <i class="fa fa-hotel"></i>
+      <h3>Affordable Hotel</h3>
+      <p>Discover our range of affordable hotel accommodations tailored to your needs.</p>
+    </div>
+    <div class="service-card">
+      <i class="fa fa-cutlery"></i>
+      <h3>Food & Drinks</h3>
+      <p>Indulge in delicious food and refreshing drinks served with care and quality.</p>
+    </div>
+    <div class="service-card">
+      <i class="fa fa-shield"></i>
+      <h3>Safety Guide</h3>
+      <p>Stay informed and protected with our comprehensive safety guides and tips.</p>
+    </div>
+    <div class="service-card">
+      <i class="fa fa-map"></i>
+      <h3>Local Attractions</h3>
+      <p>Explore nearby attractions and landmarks to make the most of your stay.</p>
+    </div>
+    <div class="service-card">
+      <i class="fa fa-car"></i>
+      <h3>Transportation Assistance</h3>
+      <p>Get assistance with transportation arrangements for convenient travel.</p>
+    </div>
+    <div class="service-card">
+      <i class="fa fa-wifi"></i>
+      <h3>High-Speed Internet</h3>
+      <p>Enjoy seamless connectivity with high-speed internet access during your stay.</p>
+    </div>
+  </div>
+  <h1 style="text-align: center; color: white;" class="glossy-text">Gallery of Happiness</h1>
+  <section class="gallery">
+    <div class="gallery-item">
+        <img src="assets/customer1.png" alt="Image 3">
+        
+    </div>
+    <div class="gallery-item">
+        <img src="assets/customer2.jpeg" alt="Image 4">
+    </div>
+    <div class="gallery-item">
+        <img src="assets/customer3.png" alt="Image 4">
+    </div>
+    <div class="gallery-item">
+        <img src="assets/customer4.jpeg" alt="Image 4">
+    </div>
+    <div class="gallery-item">
+        <img src="assets/customer5.jpeg" alt="Image 4">
+    </div>
+   
+</section>
+
+<div class="second-section">
+  <div class="booking-section">
+      <div class="left-section">
+          <img style="border-radius: 12px;" src="assets/NuTravels.png" alt="Brand Logo">
+      </div>
+      <div class="right-section container">
+          <h2>About Us</h2>
+         <p style="line-height: 1.8;">Since our inception in 2023, NuTravels has proudly served over 10,000 travelers, helping them discover the wonders of 
+          the world. Our mission is to provide personalized and memorable travel experiences, ensuring each journey is as unique as our clients. 
+          With a focus on customer satisfaction, we’ve curated over 500 bespoke itineraries, ventured into 50 different countries, and received a 95% 
+          satisfaction rate from our travelers. At NuTravels, we don’t just plan trips;
+           we create stories, forge connections, and open doors to new adventures. Join us, and let’s explore the globe together! 🌍✈️🧳</p>
+      </div>
+
+  </div>
+
+</div>
+  
+<div class="footer">
+  <h2>NuTravels</h2>
+  <p>Explore the World with Us</p>
+  <ul class="social-icons">
+    <li><a href="#"><i class="fa fa-instagram" style="font-size:20px;color:red"></i>Instagram</a></li>
+    <li><a href="#"><i class="fa fa-facebook" style="font-size:20px;color:blue"></i>Facebook</a></li>
+    <li><a href="#"><i class="fa fa-twitter" style="font-size:20px;color:lightblue"></i>Twitter</a></li>
+    <li><a href="#"><i class="fa fa-youtube" style="font-size:20px;color:red"></i></a>YouTube</li>
+  </ul>
+  <p class="copyright">&copy; 2024 NuTravels. All Rights Reserved.</p>
+</div>
+<!-- Sign Up Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Sign Up Form -->
+        <form id="signupForm" onsubmit="event.preventDefault(); if(validateSignupForm())">          <div class="mb-3">
+            <label for="fullname" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullname">
+          </div>
+          <div class="mb-3">
+            <label for="contact" class="form-label">Contact</label>
+            <input type="text" class="form-control" id="contact">
+          </div>
+          <div class="mb-3">
+            <label for="dob" class="form-label">Date of Birth</label>
+            <input type="date" class="form-control" id="dob">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email ID</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <div class="mb-3">
+            <label for="gender" class="form-label">Gender</label>
+            <select class="form-select" id="gender">
+              <option selected>Choose...</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <p class="mt-3">Already have an account? <a href="#" data-bs-toggle="modal" onclick="$('#signupModal').modal('hide');" data-bs-target="#loginModal">Log in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" onsubmit="event.preventDefault(); if(validateLoginForm())">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email ID</label>
+            <input type="email" class="form-control" id="loginEmail">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword">
+          </div>
+          <button type="submit" class="btn btn-primary">Log In</button>
+        </form>
+        <p class="mt-3">Don't have an account? <a href="#" data-bs-toggle="modal" onclick="$('#loginModal').modal('hide');" data-bs-target="#signupModal">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
