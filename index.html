@@ -30,7 +30,7 @@
             <a class="nav-link" href="#">Book</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="packages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Packages
             </a>
             <ul class="dropdown-menu">
@@ -41,19 +41,20 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
+            <a class="nav-link" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
+            <a class="nav-link" href="#gallery">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about">About</a>
           </li>
         </ul>
-        <div class="d-flex" role="search">
+        <div id="loginButtons" class="d-flex" role="search">
           <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
           <button class="btn btn-primary ms-3" type="button" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
-        </div>
+      </div>
+      <button id="logoutButton" class="btn btn-primary d-none ms-3" onclick="logout()">Logout</button>      
       </div>
     </div>
   </nav>
@@ -106,7 +107,7 @@
     
         </div>
         
-        <h2 style="text-align:center">Packages</h2>
+        <h2 style="text-align:center" id="packages">Packages</h2>
 
 <div class="slideshow-container">
   <div class="package-card mySlides1">
@@ -189,7 +190,7 @@
   <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
 </div>
 
-<div class="services-section">
+<div class="services-section" id="services">
     <div class="service-card">
       <i class="fa fa-hotel"></i>
       <h3>Affordable Hotel</h3>
@@ -222,7 +223,7 @@
     </div>
   </div>
   <h1 style="text-align: center; color: white;" class="glossy-text">Gallery of Happiness</h1>
-  <section class="gallery">
+  <section class="gallery" id="gallery">
     <div class="gallery-item">
         <img src="assets/customer1.png" alt="Image 3">
         
@@ -242,7 +243,7 @@
    
 </section>
 
-<div class="second-section">
+<div class="second-section" id="about">
   <div class="booking-section">
       <div class="left-section">
           <img style="border-radius: 12px;" src="assets/NuTravels.png" alt="Brand Logo">

@@ -86,32 +86,51 @@ return true;
 }
 
 function validateLoginForm() {
-var loginEmail = document.getElementById('loginEmail');
-var loginPassword = document.getElementById('loginPassword');
-
-if(loginEmail.value === '') {
-alert('Please enter your email.');
-return false;
-}
-if(loginPassword.value === '') {
-alert('Please enter your password.');
-return false;
-}
-
-alert('Form submitted successfully!');
-return true;
+    var loginEmail = document.getElementById('loginEmail');
+    var loginPassword = document.getElementById('loginPassword');
+    
+    if (loginEmail.value.trim() === '') {
+        alert('Please enter your email.');
+        return false;
+    }
+    
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailPattern.test(loginEmail.value)) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+    
+    if (loginPassword.value.trim() === '') {
+        alert('Please enter your password.');
+        return false;
+    }
+    
+    if (loginEmail.value !== 'admin@gmail.com' || loginPassword.value !== 'admin123') {
+        alert('Please enter valid credentials.');
+        return false;
+    }
+    document.getElementById('loginButtons').classList.add('d-none');
+    document.getElementById('logoutButton').classList.remove('d-none');
+    alert('Login successful!');
+    return false;
 }
 
 document.querySelector('#signupForm').addEventListener('submit', function(event) {
-event.preventDefault();
-if(validateSignupForm()) {
-this.submit();
-}
+    event.preventDefault();
+    if (validateSignupForm()) {
+        this.submit();
+    }
 });
 
 document.querySelector('#loginForm').addEventListener('submit', function(event) {
-event.preventDefault();
-if(validateLoginForm()) {
-this.submit();
-}
+    event.preventDefault();
+    if (validateLoginForm()) {
+        this.submit();
+    }
 });
+
+
+function logout() {
+    location.reload();
+}

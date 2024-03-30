@@ -50,7 +50,9 @@ nav a {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
+.d-none{
+  display: none;
+}
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
